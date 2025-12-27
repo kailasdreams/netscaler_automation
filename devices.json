@@ -1,0 +1,16 @@
+{
+  "default": {
+    "host": "10.1.1.101",
+    "username": "nsroot",
+    "password": "kailas@123",
+    "name": "Default NetScaler",
+    "description": "Primary NetScaler device"
+  },
+  "LAB-LTM-01": {
+    "name": "Netscaler1",
+    "host": "10.1.1.10",
+    "username": "nsroot",
+    "password": "kailas@123",
+    "description": ""
+  }
+}

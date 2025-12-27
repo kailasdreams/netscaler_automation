@@ -1,0 +1,60 @@
+2025-11-17 00:00:09,425 INFO app: Create request: vip=10.1.1.189 vip_name=Vs_test port=443 sg=www.exmaple.com_443 nodes=['10.1.255.20:80', '10.1.255.21:80', '10.1.255.21:80'] monitor=tcp cert=prod-cert
+2025-11-17 00:00:09,777 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:00:09,820 INFO netscaler: Session closed
+2025-11-17 00:00:39,611 INFO app: Create request: vip=10.1.1.189 vip_name=Vs_test port=443 sg=www.exmaple.com_443 nodes=['10.1.255.20:80', '10.1.255.21:80', '10.1.255.21:80'] monitor=tcp cert=SSL_profile
+2025-11-17 00:00:39,692 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:00:39,717 INFO netscaler: Servicegroup www.exmaple.com_443 already exists
+2025-11-17 00:00:39,733 WARNING netscaler: Member 10.1.255.20:80 already exists in www.exmaple.com_443
+2025-11-17 00:00:39,743 WARNING netscaler: Member 10.1.255.21:80 already exists in www.exmaple.com_443
+2025-11-17 00:00:39,757 WARNING netscaler: Member 10.1.255.21:80 already exists in www.exmaple.com_443
+2025-11-17 00:00:39,797 INFO netscaler: LB vserver created: Vs_test (10.1.1.189:443)
+2025-11-17 00:00:39,809 INFO netscaler: Bound servicegroup www.exmaple.com_443 to vserver Vs_test
+2025-11-17 00:00:39,883 WARNING netscaler: Monitor tcp already bound to servicegroup www.exmaple.com_443
+2025-11-17 00:00:39,885 INFO netscaler: Session closed
+2025-11-17 00:00:45,459 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:00:45,493 INFO netscaler: Session closed
+2025-11-17 00:02:31,752 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:02:31,781 INFO netscaler: Session closed
+2025-11-17 00:03:40,475 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:03:40,518 INFO netscaler: Session closed
+2025-11-17 00:04:58,476 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:04:58,508 INFO netscaler: Session closed
+2025-11-17 00:05:27,763 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:05:27,789 INFO netscaler: Session closed
+2025-11-17 00:07:39,040 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:07:39,071 INFO netscaler: Session closed
+2025-11-17 00:14:52,667 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-11-17 00:14:52,706 INFO netscaler: Session closed
+2025-12-27 07:45:38,470 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 07:45:38,502 INFO netscaler: Session closed
+2025-12-27 07:59:06,871 WARNING app: NetScaler device 10.1.1.10 is not reachable: Connection failed: HTTPSConnectionPool(host='10.1.1.10', port=443): Max retries exceeded with url: /nitro/v1/config/login (Caused by ConnectTimeoutError(<HTTPSConnection(host='10.1.1.10', port=443) at 0x178f4af2270>, 'Connection to 10.1.1.10 timed out. (connect timeout=30)'))
+2025-12-27 07:59:16,668 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 07:59:16,688 INFO netscaler: Session closed
+2025-12-27 08:03:27,616 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:03:27,637 INFO netscaler: Session closed
+2025-12-27 08:05:58,281 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:05:58,308 INFO netscaler: Session closed
+2025-12-27 08:06:16,958 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:06:16,982 INFO netscaler: Session closed
+2025-12-27 08:06:17,388 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:06:17,404 INFO netscaler: Session closed
+2025-12-27 08:06:42,315 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:06:42,334 INFO netscaler: Session closed
+2025-12-27 08:07:15,371 INFO app: Create request: device=default vip=10.1.1.189 vip_name=Vs_test port=80 sg=sg_80 nodes=['10.1.255.20:80', '10.1.255.21:80', '10.1.255.21:80'] monitor=None cert=None
+2025-12-27 08:07:15,494 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:07:15,611 INFO netscaler: Servicegroup created: sg_80
+2025-12-27 08:07:15,686 INFO netscaler: Added member 10.1.255.20:80 to sg_80
+2025-12-27 08:07:15,715 INFO netscaler: Added member 10.1.255.21:80 to sg_80
+2025-12-27 08:07:15,751 WARNING netscaler: Member 10.1.255.21:80 already exists in sg_80
+2025-12-27 08:07:16,003 INFO netscaler: LB vserver created: Vs_test (10.1.1.189:80)
+2025-12-27 08:07:16,025 INFO netscaler: Bound servicegroup sg_80 to vserver Vs_test
+2025-12-27 08:07:16,029 INFO netscaler: Session closed
+2025-12-27 08:07:17,591 INFO app: Create request: device=default vip=10.1.1.189 vip_name=Vs_test port=80 sg=sg_80 nodes=['10.1.255.20:80', '10.1.255.21:80', '10.1.255.21:80'] monitor=None cert=None
+2025-12-27 08:07:17,658 INFO netscaler: Logged in to NetScaler: 10.1.1.101
+2025-12-27 08:07:17,673 INFO netscaler: Servicegroup sg_80 already exists
+2025-12-27 08:07:17,688 WARNING netscaler: Member 10.1.255.20:80 already exists in sg_80
+2025-12-27 08:07:17,703 WARNING netscaler: Member 10.1.255.21:80 already exists in sg_80
+2025-12-27 08:07:17,712 WARNING netscaler: Member 10.1.255.21:80 already exists in sg_80
+2025-12-27 08:07:17,723 INFO netscaler: LB vserver Vs_test already exists
+2025-12-27 08:07:17,739 WARNING netscaler: Servicegroup sg_80 already bound to vserver Vs_test
+2025-12-27 08:07:17,746 INFO netscaler: Session closed

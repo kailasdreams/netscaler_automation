@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NetScaler Configuration Portal</title>
+
+  <link href="/static/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+      body {
+          background: #f4f7fb;
+          font-family: "Segoe UI", sans-serif;
+      }
+
+      /* HERO */
+      .hero {
+          background: linear-gradient(135deg, #1a2a6c, #2a6ea5, #45a247);
+          color: #fff;
+          padding: 70px 50px;
+          border-radius: 24px;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      }
+
+      /* Animated Glow */
+      .hero::before {
+          content: "";
+          position: absolute;
+          top: -120px;
+          right: -120px;
+          width: 280px;
+          height: 280px;
+          background: rgba(255,255,255,0.2);
+          border-radius: 50%;
+          filter: blur(80px);
+          animation: floatGlow 6s infinite alternate ease-in-out;
+      }
+
+      @keyframes floatGlow {
+          from { transform: translate(0,0); }
+          to { transform: translate(-30px, 20px); }
+      }
+
+      .hero h1 {
+          font-size: 42px;
+          font-weight: 700;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+
+      .btn-main {
+          border-radius: 14px;
+          padding: 12px 25px;
+          font-size: 18px;
+          font-weight: 600;
+      }
+
+      /* GLASS CARDS */
+      .feature-card {
+          background: rgba(255,255,255,0.7);
+          backdrop-filter: blur(8px);
+          padding: 28px;
+          border-radius: 18px;
+          border: 1px solid rgba(255,255,255,0.5);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+          transition: 0.35s ease;
+      }
+      .feature-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+      }
+
+      .feature-card i {
+          font-size: 48px;
+          color: #1a2a6c;
+          margin-bottom: 15px;
+      }
+
+      footer {
+          margin-top: 50px;
+          padding: 20px;
+          text-align: center;
+          color: #555;
+      }
+  </style>
+
+</head>
+
+<body class="p-4">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 rounded">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <i class="fa-solid fa-network-wired me-2"></i>NetScaler Portal
+      </a>
+
+      <div class="navbar-nav ms-auto">
+        {% if current_user.is_authenticated %}
+          <span class="navbar-text me-3">
+            <i class="fa-solid fa-user me-1"></i>Welcome, {{ current_user.username }}!
+          </span>
+          <a class="btn btn-outline-light btn-sm" href="{{ url_for('logout') }}">
+            <i class="fa-solid fa-sign-out-alt me-1"></i>Logout
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+      <!-- HERO SECTION -->
+      <div class="hero mb-5">
+          <h1>NetScaler Configuration Portal</h1>
+          <p class="mt-2 lead">
+              A modern, unified platform to manage VIPs, service groups, SSL certificates & automation workflows.
+          </p>
+
+          <div class="mt-4">
+              <a href="/create" class="btn btn-light btn-main me-3">
+                  <i class="fa-solid fa-plus-circle"></i> Create VIP
+              </a>
+              <a href="/dashboard" class="btn btn-dark btn-main">
+                  <i class="fa-solid fa-table"></i> VIP Inventory
+              </a>
+          </div>
+      </div>
+
+      <!-- FEATURE CARDS -->
+      <div class="row g-4 mb-5">
+
+          <div class="col-md-6 col-lg-3">
+              <div class="feature-card text-center">
+                  <i class="fa-solid fa-network-wired"></i>
+                  <h4 class="mt-3">Create VIP</h4>
+                  <p>Provision Virtual Servers with service groups, SSL profiles, and monitors with ease.</p>
+                  <a href="/create" class="btn btn-primary mt-3">Open</a>
+              </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+              <div class="feature-card text-center">
+                  <i class="fa-solid fa-database"></i>
+                  <h4 class="mt-3">VIP Inventory</h4>
+                  <p>View all NetScaler VIP objects with real-time status, protocol mapping and health checks.</p>
+                  <a href="/dashboard" class="btn btn-primary mt-3">Open</a>
+              </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+              <div class="feature-card text-center">
+                  <i class="fa-solid fa-server"></i>
+                  <h4 class="mt-3">Device Management</h4>
+                  <p>Manage multiple NetScaler devices, add/remove instances, and monitor connectivity.</p>
+                  <a href="/devices" class="btn btn-primary mt-3">Manage</a>
+              </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+              <div class="feature-card text-center">
+                  <i class="fa-solid fa-code-branch"></i>
+                  <h4 class="mt-3">Automation & CI/CD</h4>
+                  <p>Integrate NetScaler provisioning into pipelines using REST APIs & IaC workflows.</p>
+              </div>
+          </div>
+
+      </div>
+
+      <footer>
+          © 2025 NetScaler Automation Portal — Designed for Enterprise Operations
+      </footer>
+
+  </div>
+
+</body>
+</html>
