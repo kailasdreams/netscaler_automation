@@ -12,3 +12,4 @@ service groups, monitor and SSL bindings on NetScaler ADC (tested for 14.x).
 ## Notes
 - For production, do NOT store credentials in `config.py`. Use environment variables or a secrets manager.
 - The NitRO API requires network reachability to your ADC from the machine running this app.
+- for  Support please contact to kailas Pathade 7777050805 
